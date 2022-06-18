@@ -9,12 +9,16 @@ import SwiftUI
 
 struct Harish: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct Harish_Previews: PreviewProvider {
-    static var previews: some View {
-        Harish()
+        NavigationView {
+            VStack {
+                Image("harish").resizable().scaledToFit()
+                Text("I am Harish")
+                Text("I am not cool")
+                Text("I am going senile")
+                Link(destination: URL(string: "https://www.youtube.com/watch?v=dQw4w9WgXcQ")!) {
+                    Text("hello")
+                }
+            }.navigationTitle("Harish")
+        }
     }
 }
